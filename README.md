@@ -9,11 +9,11 @@ Angular 12 (Material, Flex-Layout)
 ## Setup:
 - Install NodeJs (https://nodejs.org/en/)
 - Config API_URL (if necessary) -> default: http://localhost:8080/api/ibento (voir environment.ts)  
-- Run (for dependencies)
+- Run (for dependencies):
 ```sh
-mvn clean install
+npm install
 ``` 
-- Run (to start the server)
+- Run (to start the server):
 ```sh
 ng serve
 ``` 
