@@ -1,0 +1,14 @@
+
+<div fxLayout="row"fxLayoutAlign=" center" fxLayoutGap="10px">
+  <input #searchBox id="search-ibentos" (input)="search(searchBox.value)" />
+  <mat-icon>search</mat-icon>
+</div>
+
+<ul class="search-result">
+  <li *ngFor="let ibento of ibentos$ | async" >
+    <a routerLink="/detail/{{ibento.id}}">
+      {{ibento.name}}
+    </a>
+  </li>
+</ul>
+

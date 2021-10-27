@@ -1,0 +1,68 @@
+<app-ibento-search *ngIf="!isEmpty"></app-ibento-search>
+
+<mat-progress-bar *ngIf="isWaiting" mode="indeterminate"></mat-progress-bar>
+
+<div *ngIf="isEmpty" fxLayout="column" fxLayoutAlign="center center">
+  <h2>Aucun événement prévu :-)</h2>
+  <img src="/assets/img/no_events.png" alt=""/>
+  <div fxLayout="row" fxLayoutAlign=" center" fxLayoutGap="10px">
+    <h2>Ajouter ici --> </h2>
+    <button matTooltip="Ajouter un événement" matTooltipClass="tooltip" routerLink="/detail">
+      <mat-icon>post_add</mat-icon>
+    </button>
+  </div>
+</div>
+
+<table *ngIf="hasIbentos()" mat-table [dataSource]="list" multiTemplateDataRows class="mat-elevation-z8">
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element"> {{element['ibento']['name']}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="startDate">
+    <th mat-header-cell *matHeaderCellDef>Date de début</th>
+    <td mat-cell *matCellDef="let element">{{element['ibento']['startDate'] | date: 'EEEE, dd MMMM yyyy - HH:mm'}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="endDate">
+    <th mat-header-cell *matHeaderCellDef>Date de fin</th>
+    <td mat-cell *matCellDef="let element"> {{element['ibento']['endDate'] | date: 'EEEE, dd MMMM yyyy - HH:mm'}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="minutesBeforeStart">
+    <th mat-header-cell *matHeaderCellDef>Dans</th>
+    <td mat-cell *matCellDef="let element"> {{formatMinutes(element['minutesBeforeStart'])}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <button routerLink="/detail/{{element.ibento.id}}">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button (click)="delete(element.ibento); $event.stopPropagation()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="expandedDetail">
+    <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+      <div class="example-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+        <strong style="padding-bottom: 15px">{{element.ibento.description}}</strong>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+
+  <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+      class="example-element-row"
+      [class.example-expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element">
+  </tr>
+
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+
+</table>

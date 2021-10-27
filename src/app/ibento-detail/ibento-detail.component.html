@@ -1,0 +1,38 @@
+<div fxLayout="row wrap" fxLayoutGap="10px" cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
+
+  <div fxLayout="column wrap">
+
+    <mat-progress-bar *ngIf="isWaiting" mode="indeterminate"></mat-progress-bar>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nom</mat-label>
+      <input matInput [(ngModel)]="ibento.name" maxlength="32" placeholder="Ex. Entrevue chez Kumojin"
+             class="large-font" cdkFocusInitial>
+      <mat-hint align="start" fxHide="true" fxShow.gt-sm>32 caractères maximum</mat-hint>
+      <mat-hint align="end" fxHide="true" fxShow.gt-sm>{{ibento.name?.length || 0}}/32</mat-hint>
+    </mat-form-field>
+
+    <div fxLayout="row wrap" fxFlexOffset="2" fxLayoutGap="5px">
+
+      <app-date-time-picker label="Date début" [(dateTime)]="ibento.startDate"></app-date-time-picker>
+
+      <app-date-time-picker label="Date Fin" [hourGap]="1" [(dateTime)]="ibento.endDate"></app-date-time-picker>
+
+    </div>
+
+    <mat-form-field appearance="fill">
+      <textarea matInput [(ngModel)]="ibento.description" rows="4"
+                placeholder="Ajouter une description à propos de cet événement..."></textarea>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <button (click)="save()" fxLayout="row" fxLayoutGap="10px"
+            fxLayoutAlign="center center" class="main-button">
+      <span>Enregistrer</span>
+    </button>
+  </div>
+
+</div>
+
+

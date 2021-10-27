@@ -1,0 +1,22 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-between" fxLayoutGap="10px">
+  <div>
+    <h1>Gestion d'événements</h1>
+    <div fxLayout="row" fxLayoutAlign=" center">
+      <h2>イベント</h2>
+      <h3>(Ibento)</h3>
+    </div>
+  </div>
+
+  <nav>
+    <div fxLayout="row">
+      <button value="left" matTooltip="Dashboard" matTooltipClass="tooltip" routerLink="/dashboard">
+        <mat-icon>dashboard</mat-icon>
+      </button>
+      <button matTooltip="Ajouter un événement" matTooltipClass="tooltip" routerLink="/detail">
+        <mat-icon>post_add</mat-icon>
+      </button>
+    </div>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
