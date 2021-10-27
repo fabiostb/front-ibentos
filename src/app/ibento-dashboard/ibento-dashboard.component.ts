@@ -64,7 +64,7 @@ export class IbentoDashboardComponent implements OnInit {
   formatMinutes(minutes: number) {
     if (isNotNullOrUndefined(minutes) && minutes > 0) {
       // tslint:disable-next-line:no-bitwise
-      return `${minutes / 60 ^ 0}h` + minutes % 60;
+      return `${minutes / 60 ^ 0}h` + `${minutes % 60}m`;
     }
     return '----';
   }
