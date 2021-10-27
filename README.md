@@ -29,7 +29,6 @@ Improvements (TODOs):
 - i18n
 - allow to change the time in the datetime picker (app-date-time-picker)
 - error handling (user/server validations)
-- better job of transforming error for user consumption
 - ...
 
 ### Enjoy my DateTimePicker component (Two-way binding) :)
