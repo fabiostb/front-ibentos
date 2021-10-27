@@ -32,5 +32,5 @@ Improvements (TODOs):
 - better job of transforming error for user consumption
 - ...
 
-### Enjoy my Google Calendar inspired DateTimePicker component (Two-way binding) :)
+### Enjoy my DateTimePicker component (Two-way binding) :)
 -> app-date-time-picker <-
