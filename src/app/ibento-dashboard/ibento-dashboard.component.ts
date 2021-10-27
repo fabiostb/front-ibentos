@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import {Ibento} from '../ibento';
-import {IbentoService} from '../ibento.service';
+import {Ibento} from '../ibento-service/ibento';
+import {IbentoService} from '../ibento-service/ibento.service';
 import {isNotNullOrUndefined} from 'codelyzer/util/isNotNullOrUndefined';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {IbentoList} from '../ibento-list';
+import {IbentoList} from '../ibento-service/ibento-list';
 
 @Component({
   selector: 'app-ibento-list',

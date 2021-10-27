@@ -6,8 +6,8 @@ import {
    debounceTime, distinctUntilChanged, switchMap
  } from 'rxjs/operators';
 
-import { Ibento } from '../ibento';
-import { IbentoService } from '../ibento.service';
+import { Ibento } from '../ibento-service/ibento';
+import { IbentoService } from '../ibento-service/ibento.service';
 
 @Component({
   selector: 'app-ibento-search',

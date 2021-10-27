@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Ibento } from '../ibento';
-import { IbentoService } from '../ibento.service';
+import { Ibento } from '../ibento-service/ibento';
+import { IbentoService } from '../ibento-service/ibento.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {ActivatedRoute, Router} from '@angular/router';
 import {isNotNullOrUndefined} from 'codelyzer/util/isNotNullOrUndefined';
