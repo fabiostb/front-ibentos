@@ -24,3 +24,13 @@ http://localhost:4200
 - Enjoy It!
 
 @see (BACK) https://github.com/fabiostb/back-ibentos
+
+Improvements (TODOs):
+- i18n
+- allow to change the time in the datetime picker (app-date-time-picker)
+- error handling (user/server validations)
+- better job of transforming error for user consumption
+- ...
+
+### Enjoy my Google Calendar inspired DateTimePicker component (Two-way binding) :)
+-> app-date-time-picker <-
