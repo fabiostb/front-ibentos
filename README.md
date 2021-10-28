@@ -1,4 +1,4 @@
-# front-ibentos
+# Front-end Ibento
 Simple Angular CRUD app
 
 ## Event management
