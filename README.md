@@ -1,5 +1,5 @@
 # Front-end Ibento
-Simple Angular CRUD app
+Simple Angular CRUD Web Application
 
 ## Event management
 Ibento = 'Event' in Japanese :p
