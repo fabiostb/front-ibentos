@@ -8,7 +8,10 @@ Angular 12 (Material, Flex-Layout)
 
 ## Setup:
 - Install NodeJs (https://nodejs.org/en/)
-- Config API_URL (if necessary) -> default: http://localhost:8080/api/ibento (voir environment.ts)  
+- Config API_URL (if necessary) -> default: http://localhost:8080/api/ibento (voir environment.ts)
+```sh
+@see (BACK-END API) https://github.com/fabiostb/back-ibentos
+``` 
 - Run (for dependencies):
 ```sh
 npm install
@@ -22,8 +25,6 @@ ng serve
 http://localhost:4200
 ```
 - Enjoy It!
-
-@see (BACK) https://github.com/fabiostb/back-ibentos
 
 Improvements (TODOs):
 - i18n
