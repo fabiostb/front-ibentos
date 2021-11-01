@@ -72,7 +72,7 @@ export class IbentoService {
   }
 
   /** DELETE */
-  deleteIbento(id: string): Observable<any> {
+  deleteIbento(id: number): Observable<any> {
     const url = `${environment.API_URL}/${id}`;
 
     return this.http.delete(url, this.httpOptions).pipe(

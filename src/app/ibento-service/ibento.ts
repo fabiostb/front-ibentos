@@ -1,5 +1,5 @@
 export class Ibento {
-  id: string | undefined;
+  id: number | undefined;
   name: string | undefined;
   description: string | undefined;
   startDate: Date | undefined;

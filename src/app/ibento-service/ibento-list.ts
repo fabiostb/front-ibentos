@@ -1,6 +1,8 @@
 import {Ibento} from './ibento';
 
 export class IbentoList {
-  ibento: Ibento | undefined;
-  minutesBeforeStart: number | undefined;
+
+  constructor(public ibento: Ibento | undefined,
+              public minutesBeforeStart: number | undefined) {
+  }
 }
