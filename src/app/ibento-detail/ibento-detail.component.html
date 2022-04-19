@@ -6,7 +6,7 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Nom</mat-label>
-      <input matInput [(ngModel)]="ibento.name" maxlength="32" placeholder="Ex. Entrevue chez Kumojin"
+      <input [(ngModel)]="ibento.name" matInput maxlength="32" placeholder="Ex. Chercher les enfants"
              class="large-font" cdkFocusInitial>
       <mat-hint align="start" fxHide="true" fxShow.gt-sm>32 caractères maximum</mat-hint>
       <mat-hint align="end" fxHide="true" fxShow.gt-sm>{{ibento.name?.length || 0}}/32</mat-hint>
